@@ -18,20 +18,20 @@ public enum TipoSorologiaSarsCov2 {
         this.descricao = descricao;
     }
 
-    public static TipoSorologiaSarsCov2 getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return TESTE_RAPIDO;
+                return TESTE_RAPIDO.getDescricao();
             case 2:
-                return ELISA;
+                return ELISA.getDescricao();
             case 3:
-                return QUIMILUMINESCENCIA;
+                return QUIMILUMINESCENCIA.getDescricao();
             case 4:
-                return OUTRO;
+                return OUTRO.getDescricao();
             default:
                 return null;
         }

@@ -4,14 +4,12 @@ import enums.ClassificacaoFinalCaso;
 import enums.CriterioEncerramento;
 import enums.EvolucaoCaso;
 import importer.DadosImporter;
-import lombok.NonNull;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Objects;
 
 @Entity
 @Table(name = "dados_conclusivos")
@@ -23,16 +21,16 @@ public class DadosConclusivos {
     private long pk;
 
     @Column(name = "classificacao_final_caso")
-    private ClassificacaoFinalCaso classificacaoFinalCaso;
+    private String classificacaoFinalCaso;
 
     @Column(name = "outro_agente_srag")
     private String outroAgenteSrag;
 
     @Column(name = "criterio_encerramento")
-    private CriterioEncerramento criterioEncerramento;
+    private String criterioEncerramento;
 
     @Column(name = "evolucao_caso")
-    private EvolucaoCaso evolucaoCaso;
+    private String evolucaoCaso;
 
     @Column(name = "data_alta_ou_obito")
     private Date dataAltaOuObito;

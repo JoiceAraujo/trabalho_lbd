@@ -19,22 +19,22 @@ public class DadosLaboratoriais {
     private long pk;
 
     @Column(name = "tipo_teste_antigenico")
-    private TipoTesteAntigenoViral tipoTesteAntigenico;
+    private String tipoTesteAntigenico;
 
     @Column(name = "data_resultado_antigeno")
     private Date dataResultadoAntigeno;
 
     @Column(name = "resultado_teste_antigenico")
-    private ResultadoTeste resultadoTesteAntigenico;
+    private String resultadoTesteAntigenico;
 
     @Column(name = "teste_antigenico_positivo_influenza")
-    private SimNaoIgnorado testeAntigenicoPositivoInfluenza;
+    private String testeAntigenicoPositivoInfluenza;
 
     @Column(name = "an_influenza_resultado")
-    private TiposInfluenza anInfluenzaResultado;
+    private String anInfluenzaResultado;
 
     @Column(name = "an_positivo_outros_virus")
-    private SimNaoIgnorado anPositivoOutrosVirus;
+    private String anPositivoOutrosVirus;
 
     @Column(name = "an_positivo_sars_cov2")
     private String anPositivoSarsCov2;
@@ -61,31 +61,31 @@ public class DadosLaboratoriais {
     private String anDescricaoOutroVirus;
 
     @Column(name = "resultado_rtpcr")
-    private ResultadoRtPcr resultadoRTPCR;
+    private String resultadoRTPCR;
 
     @Column(name = "data_resultado_rtpcr")
     private Date dataResultadoRTPCR;
 
     @Column(name = "agente_rtpcr_positivo_influenza")
-    private SimNaoIgnorado agenteRtPcrPositivoInfluenza;
+    private String agenteRtPcrPositivoInfluenza;
 
     @Column(name = "influenza_agt_rtpcr")
-    private TiposInfluenza influenzaAgtRtPcr;
+    private String influenzaAgtRtPcr;
 
     @Column(name = "sub_tipo_influenza_a")
-    private SubTipoInfluenzaA subTipoInfluenzaA;
+    private String subTipoInfluenzaA;
 
     @Column(name = "descricao_sub_tipo_influenza_a")
     private String descricaoSubTipoInfluenzaA;
 
     @Column(name = "linhagem_influenza_b")
-    private LinhagemInfluenzaB linhagemInfluenzaB;
+    private String linhagemInfluenzaB;
 
     @Column(name = "descricacao_linhagem_influenza_b")
     private String descricacaoLinhagemInfluenzaB;
 
     @Column(name = "rtpcr_positivo_outros_virus")
-    private SimNaoIgnorado rtpcrPositivoOutrosVirus;
+    private String rtpcrPositivoOutrosVirus;
 
     @Column(name = "rtpcr_positivo_sars_cov2")
     private String rtpcrPositivoSarsCov2;
@@ -124,7 +124,7 @@ public class DadosLaboratoriais {
     private String descricaoRtpcrOutro;
 
     @Column(name = "tipo_amostra_sars_cov2")
-    private TipoAmostraSarsCov2 tipoAmostraSarsCov2;
+    private String tipoAmostraSarsCov2;
 
     @Column(name = "descricao_amostra_sars_cov2")
     private String descricaoAmostraSarsCov2;
@@ -133,7 +133,7 @@ public class DadosLaboratoriais {
     private Date dataColetaAmostraSarsCov2;
 
     @Column(name = "tipo_sorologia_sars_cov2")
-    private TipoSorologiaSarsCov2 tipoSorologiaSarsCov2;
+    private String tipoSorologiaSarsCov2;
 
     @Column(name = "descricao_outro_sorologia_sars_cov2")
     private String descricaoOutroSorologiaSarsCov2;

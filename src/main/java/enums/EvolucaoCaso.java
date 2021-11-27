@@ -22,20 +22,20 @@ public enum EvolucaoCaso {
         return this.descricao;
     }
 
-    public static EvolucaoCaso getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return CURA;
+                return CURA.getDescricao();
             case 2:
-                return OBITO;
+                return OBITO.getDescricao();
             case 3:
-                return OBITO_OUTRA_CAUSA;
+                return OBITO_OUTRA_CAUSA.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

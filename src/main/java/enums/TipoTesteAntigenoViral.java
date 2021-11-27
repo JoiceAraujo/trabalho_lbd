@@ -16,16 +16,16 @@ public enum TipoTesteAntigenoViral {
         this.descricao = descricao;
     }
 
-    public static TipoTesteAntigenoViral getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return IMUNOFLUORESCENCIA_IF;
+                return IMUNOFLUORESCENCIA_IF.getDescricao();
             case 2:
-                return TESTE_RAPIDO_ANTIGENICO;
+                return TESTE_RAPIDO_ANTIGENICO.getDescricao();
             default:
                 return null;
         }

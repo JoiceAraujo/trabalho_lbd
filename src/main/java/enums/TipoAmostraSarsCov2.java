@@ -17,18 +17,18 @@ public enum TipoAmostraSarsCov2 {
         this.descricao = descricao;
     }
 
-    public static TipoAmostraSarsCov2 getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return SANGUE_PLASMA_SORO;
+                return SANGUE_PLASMA_SORO.getDescricao();
             case 2:
-                return OUTRO;
+                return OUTRO.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

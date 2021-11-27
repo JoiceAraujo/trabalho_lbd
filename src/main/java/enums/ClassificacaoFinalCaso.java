@@ -23,22 +23,22 @@ public enum ClassificacaoFinalCaso {
         return this.descricao;
     }
 
-    public static ClassificacaoFinalCaso getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return SRAG_INFLUENZA;
+                return SRAG_INFLUENZA.getDescricao();
             case 2:
-                return SRAG_OUTRO_VIRUS;
+                return SRAG_OUTRO_VIRUS.getDescricao();
             case 3:
-                return SRAG_AGENTE_ETIOLOGICO;
+                return SRAG_AGENTE_ETIOLOGICO.getDescricao();
             case 4:
-                return SRAG_NAO_ESPECIFICADO;
+                return SRAG_NAO_ESPECIFICADO.getDescricao();
             case 5:
-                return SRAG_COVID_19;
+                return SRAG_COVID_19.getDescricao();
             default:
                 return null;
         }

@@ -16,16 +16,16 @@ public enum TiposInfluenza {
         this.descricao = descricao;
     }
 
-    public static TiposInfluenza getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return INFLUENZA_A;
+                return INFLUENZA_A.getDescricao();
             case 2:
-                return INFLUENZA_B;
+                return INFLUENZA_B.getDescricao();
             default:
                 return null;
         }

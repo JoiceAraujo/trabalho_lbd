@@ -20,24 +20,24 @@ public enum SubTipoInfluenzaA {
         this.descricao = descricao;
     }
 
-    public static SubTipoInfluenzaA getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return INFLUENZA_A_H1N1_PDM09;
+                return INFLUENZA_A_H1N1_PDM09.getDescricao();
             case 2:
-                return INFLUENZA_A_H3N2;
+                return INFLUENZA_A_H3N2.getDescricao();
             case 3:
-                return INFLUENZA_A_NAO_SUBTIPADO;
+                return INFLUENZA_A_NAO_SUBTIPADO.getDescricao();
             case 4:
-                return INFLUENZA_A_NAO_SUBTIPAVEL;
+                return INFLUENZA_A_NAO_SUBTIPAVEL.getDescricao();
             case 5:
-                return INCONCLUSIVO;
+                return INCONCLUSIVO.getDescricao();
             case 6:
-                return OUTRO;
+                return OUTRO.getDescricao();
             default:
                 return null;
         }

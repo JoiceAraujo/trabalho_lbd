@@ -21,26 +21,26 @@ public enum TipoRaioXTorax {
         this.descricao = descricao;
     }
 
-    public static TipoRaioXTorax getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return NORMAL;
+                return NORMAL.getDescricao();
             case 2:
-                return INFILTRADO_INTERSTICIAL;
+                return INFILTRADO_INTERSTICIAL.getDescricao();
             case 3:
-                return CONSOLIDACAO;
+                return CONSOLIDACAO.getDescricao();
             case 4:
-                return MISTO;
+                return MISTO.getDescricao();
             case 5:
-                return OUTRO;
+                return OUTRO.getDescricao();
             case 6:
-                return NAO_REALIZADO;
+                return NAO_REALIZADO.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

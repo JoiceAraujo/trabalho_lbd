@@ -20,26 +20,26 @@ public enum TipoEscolaridade {
         this.descricao = descricao;
     }
 
-    public static TipoEscolaridade getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 0:
-                return SEM_ESCOLARIDADE_ANALFABETO;
+                return SEM_ESCOLARIDADE_ANALFABETO.getDescricao();
             case 1:
-                return FUNDAMENTAL_PRIMEIRO_CICLO;
+                return FUNDAMENTAL_PRIMEIRO_CICLO.getDescricao();
             case 2:
-                return FUNDAMENTAL_SEGUNDO_CICLO;
+                return FUNDAMENTAL_SEGUNDO_CICLO.getDescricao();
             case 3:
-                return MEDIO;
+                return MEDIO.getDescricao();
             case 4:
-                return SUPERIOR;
+                return SUPERIOR.getDescricao();
             case 5:
-                return NAO_SE_APLICA;
+                return NAO_SE_APLICA.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

@@ -1,12 +1,10 @@
 import importer.DadosImporter;
 import importer.LeitorCsv;
-import org.apache.commons.lang3.time.StopWatch;
 import services.DadosFichaService;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String [] args) {
@@ -14,12 +12,13 @@ public class Main {
         DadosFichaService dadosFichaService = new DadosFichaService();
 
         try {
-            StopWatch lerCsvStopWatch = StopWatch.createStarted();
+            System.out.println("Iniciando a leitura do arquivo INFLUD-15-11-2021.csv");
             List<DadosImporter> dados = leitorCsv.lerCsv();
-            lerCsvStopWatch.stop();
-            System.out.println("Tempo Ler CSV em minutos: " + lerCsvStopWatch.getTime(TimeUnit.MILLISECONDS));
+            System.out.println("Finalizando a leitura do arquivo");
 
+            System.out.println("Inicio - Salvar dados no banco");
             dadosFichaService.salvarDadosImportados(dados);
+            System.out.println("Fim - Salvar dados no banco");
         } catch (IOException | ParseException exception) {
             exception.printStackTrace();
         }

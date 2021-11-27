@@ -18,20 +18,20 @@ public enum TipoUsoSuporteVentilatorio {
         this.descricao = descricao;
     }
 
-    public static TipoUsoSuporteVentilatorio getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return SIM_INVASIVO;
+                return SIM_INVASIVO.getDescricao();
             case 2:
-                return SIM_NAO_INVASIVO;
+                return SIM_NAO_INVASIVO.getDescricao();
             case 3:
-                return NAO;
+                return NAO.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

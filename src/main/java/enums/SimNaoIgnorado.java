@@ -18,35 +18,35 @@ public enum SimNaoIgnorado {
         this.descricao = descricao;
     }
 
-    public static SimNaoIgnorado getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 0:
-                return NAO_PREENCHIDO;
+                return NAO_PREENCHIDO.getDescricao();
             case 1:
-                return SIM;
+                return SIM.getDescricao();
             case 2:
-                return NAO;
+                return NAO.getDescricao();
             case 3:
-                return OUTRO;
+                return OUTRO.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }
     }
 
-    public static SimNaoIgnorado getValueBySigla(String sigla) {
+    public static String getValueBySigla(String sigla) {
         switch (sigla) {
             case "S":
-                return SIM;
+                return SIM.getDescricao();
             case "N":
-                return NAO;
+                return NAO.getDescricao();
             default:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
         }
     }
 }

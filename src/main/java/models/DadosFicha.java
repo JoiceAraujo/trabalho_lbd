@@ -1,7 +1,6 @@
 package models;
 
 import importer.DadosImporter;
-import lombok.NonNull;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -18,21 +17,18 @@ public class DadosFicha {
     @Column(name = "dados_ficha_pk")
     private long pk;
 
-    @NonNull
     @Column(name = "data_preenchimento_ficha_notificacao")
     private Date dataPreenchimentoFichaNotificacao;
 
     @Column(name = "semana_epidemiologica")
     private String semanaEpidemiologica;
 
-    @NonNull
     @Column(name = "data_primeiros_sintomas")
     private Date dataPrimeirosSintomas;
 
     @Column(name = "semana_epidemiologica_primeiros_sintomas")
     private String semanaEpidemiologicaPrimeirosSintomas;
 
-    @NonNull
     @Column(name = "uf_posto_notificacao")
     private String ufPostoNotificacao;
 
@@ -42,7 +38,6 @@ public class DadosFicha {
     @Column(name = "codigo_regional_saude")
     private String codigoRegionalSaude;
 
-    @NonNull
     @Column(name = "municipio_posto_notificacao")
     private String municipioPostoNotificacao;
 
@@ -52,7 +47,6 @@ public class DadosFicha {
     @Column(name = "nome_unidade_saude_notificacao")
     private String nomeUnidadeSaudeNotificacao;
 
-    @NonNull
     @Column(name = "codigo_cnes_posto_notificacao")
     private String codigoCnesPostoNotificacao;
 

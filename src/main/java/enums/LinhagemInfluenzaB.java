@@ -19,22 +19,22 @@ public enum LinhagemInfluenzaB {
         this.descricao = descricao;
     }
 
-    public static LinhagemInfluenzaB getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return VICTORIA;
+                return VICTORIA.getDescricao();
             case 2:
-                return YAMAGATHA;
+                return YAMAGATHA.getDescricao();
             case 3:
-                return NAO_REALIZADO;
+                return NAO_REALIZADO.getDescricao();
             case 4:
-                return INCONCLUSIVO;
+                return INCONCLUSIVO.getDescricao();
             case 5:
-                return OUTRO;
+                return OUTRO.getDescricao();
             default:
                 return null;
         }

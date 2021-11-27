@@ -16,18 +16,18 @@ public enum TipoSexo {
         this.descricao = descricao;
     }
 
-    public static TipoSexo getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (codigo) {
             case "M":
-                return MASCULINO;
+                return MASCULINO.getDescricao();
             case "F":
-                return FEMININO;
+                return FEMININO.getDescricao();
             case "9":
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

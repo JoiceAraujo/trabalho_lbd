@@ -2,15 +2,9 @@ package importer;
 
 import com.opencsv.bean.CsvBindByPosition;
 import lombok.Getter;
-import lombok.Setter;
-
-import java.lang.String;
 
 @Getter
 public class DadosImporter {
-    @Setter
-    private int linha;
-
     /* Dados da Ficha */
 
     @CsvBindByPosition(position = 0)

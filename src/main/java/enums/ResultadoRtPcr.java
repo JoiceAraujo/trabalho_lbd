@@ -20,24 +20,24 @@ public enum ResultadoRtPcr {
         this.descricao = descricao;
     }
 
-    public static ResultadoRtPcr getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return DETECTAVEL;
+                return DETECTAVEL.getDescricao();
             case 2:
-                return NAO_DETECTAVEL;
+                return NAO_DETECTAVEL.getDescricao();
             case 3:
-                return INCONCLUSIVO;
+                return INCONCLUSIVO.getDescricao();
             case 4:
-                return NAO_REALIZADO;
+                return NAO_REALIZADO.getDescricao();
             case 5:
-                return AGUARDANDO_RESULTADO;
+                return AGUARDANDO_RESULTADO.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

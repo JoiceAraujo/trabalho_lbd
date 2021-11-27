@@ -2,14 +2,12 @@ package models;
 
 import enums.SimNaoIgnorado;
 import importer.DadosImporter;
-import lombok.NonNull;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Objects;
 
 @Entity
 @Table(name = "dados_clinicos_epidemiologicos")
@@ -21,8 +19,7 @@ public class DadosClinicosEpidemiologicos {
     private long pk;
 
     @Column(name = "historico_viagem_internacional")
-    @NonNull
-    private SimNaoIgnorado historicoViagemInternacional;
+    private String historicoViagemInternacional;
 
     @Column(name = "pais_viagem")
 
@@ -41,121 +38,121 @@ public class DadosClinicosEpidemiologicos {
     private Date dataRetornoViagem;
 
     @Column(name = "sg_evoluiu_srag")
-    private SimNaoIgnorado sgEvoluiuSrag;
+    private String sgEvoluiuSrag;
 
     @Column(name = "caso_nosocomial")
-    private SimNaoIgnorado casoNosocomial;
+    private String casoNosocomial;
 
     @Column(name = "contato_ave_suino_outro")
-    private SimNaoIgnorado contatoAveSuinoOutro;
+    private String contatoAveSuinoOutro;
 
     @Column(name = "outro_animal")
     private String outroAnimal;
 
     @Column(name = "febre")
-    private SimNaoIgnorado febre;
+    private String febre;
 
     @Column(name = "tosse")
-    private SimNaoIgnorado tosse;
+    private String tosse;
 
     @Column(name = "dor_garganta")
-    private SimNaoIgnorado dorGarganta;
+    private String dorGarganta;
 
     @Column(name = "dispneia")
-    private SimNaoIgnorado dispneia;
+    private String dispneia;
 
     @Column(name = "desconforto_respiratorio")
-    private SimNaoIgnorado desconfortoRespiratorio;
+    private String desconfortoRespiratorio;
 
     @Column(name = "saturacao_dioxigênio")
-    private SimNaoIgnorado saturacaoO2;
+    private String saturacaoO2;
 
     @Column(name = "diarreia")
-    private SimNaoIgnorado diarreia;
+    private String diarreia;
 
     @Column(name = "vomito")
-    private SimNaoIgnorado vomito;
+    private String vomito;
 
     @Column(name = "dor_abdominal")
-    private SimNaoIgnorado dorAbdominal;
+    private String dorAbdominal;
 
     @Column(name = "fadiga")
-    private SimNaoIgnorado fadiga;
+    private String fadiga;
 
     @Column(name = "perda_ofato")
-    private SimNaoIgnorado perdaOfato;
+    private String perdaOfato;
 
     @Column(name = "perda_paladar")
-    private SimNaoIgnorado perdaPaladar;
+    private String perdaPaladar;
 
     @Column(name = "outros_sintomas")
-    private SimNaoIgnorado outrosSintomas;
+    private String outrosSintomas;
 
     @Column(name = "descricao_outros_sintomas")
     private String descricaoOutrosSintomas;
 
     @Column(name = "puerpera")
-    private SimNaoIgnorado puerpera;
+    private String puerpera;
 
     @Column(name = "fator_de_risco")
-    private SimNaoIgnorado fatorDeRisco;
+    private String fatorDeRisco;
 
     @Column(name = "doenca_cardiovascular")
-    private SimNaoIgnorado doencaCardiovascular;
+    private String doencaCardiovascular;
 
     @Column(name = "doenca_hematologica")
-    private SimNaoIgnorado doencaHematologica;
+    private String doencaHematologica;
 
     @Column(name = "sindrome_de_down")
-    private SimNaoIgnorado sindromeDeDown;
+    private String sindromeDeDown;
 
     @Column(name = "doenca_hepatica")
-    private SimNaoIgnorado doencaHepatica;
+    private String doencaHepatica;
 
     @Column(name = "asma")
-    private SimNaoIgnorado asma;
+    private String asma;
 
     @Column(name = "diabetes")
-    private SimNaoIgnorado diabetes;
+    private String diabetes;
 
     @Column(name = "doenca_neurologica")
-    private SimNaoIgnorado doencaNeurologica;
+    private String doencaNeurologica;
 
     @Column(name = "pneumopatia")
-    private SimNaoIgnorado pneumopatia;
+    private String pneumopatia;
 
     @Column(name = "imunodeficiencia")
-    private SimNaoIgnorado imunodeficiencia;
+    private String imunodeficiencia;
 
     @Column(name = "doenca_renal")
-    private SimNaoIgnorado doencaRenal;
+    private String doencaRenal;
 
     @Column(name = "obesidade")
-    private SimNaoIgnorado obesidade;
+    private String obesidade;
 
     @Column(name = "imc_paciente")
     private String imcPaciente;
 
     @Column(name = "outros_fatores_risco")
-    private SimNaoIgnorado outrosFatoresRisco;
+    private String outrosFatoresRisco;
 
     @Column(name = "descricao_fatores_risco")
     private String descricaoFatoresRisco;
 
     @Column(name = "vacinado_gripe")
-    private SimNaoIgnorado vacinadoGripe;
+    private String vacinadoGripe;
 
     @Column(name = "data_ultima_dose_vacinaca_gripe")
     private Date dataUltimaDoseVacinacaGripe;
 
     @Column(name = "mae_vacinada")
-    private SimNaoIgnorado maeVacinada;
+    private String maeVacinada;
 
     @Column(name = "data_vacinacao_mae")
     private Date dataVacinacaoMae;
 
     @Column(name = "amamentando")
-    private SimNaoIgnorado amamentando;
+    private String amamentando;
 
     @Column(name = "data_dose_unica")
     private Date dataDoseUnica;
@@ -167,7 +164,7 @@ public class DadosClinicosEpidemiologicos {
     private Date dataSegundaDose;
 
     public DadosClinicosEpidemiologicos(DadosImporter dadosImporter) throws ParseException {
-        this.historicoViagemInternacional = Objects.requireNonNull(SimNaoIgnorado.getByCodigo(dadosImporter.getHistoricoViagemInternacional()));
+        this.historicoViagemInternacional = SimNaoIgnorado.getByCodigo(dadosImporter.getHistoricoViagemInternacional());
         this.paisViagem = dadosImporter.getPaisViagem();
         this.codigoPaisViagem = dadosImporter.getCodigoPaisViagem();
         this.localViagem = dadosImporter.getLocalViagem();

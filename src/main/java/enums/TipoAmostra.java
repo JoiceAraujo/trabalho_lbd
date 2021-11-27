@@ -20,24 +20,24 @@ public enum TipoAmostra {
         this.descricao = descricao;
     }
 
-    public static TipoAmostra getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return SECRECAO_NASO_OROFARINGE;
+                return SECRECAO_NASO_OROFARINGE.getDescricao();
             case 2:
-                return LAVADO_BRONCO_ALVEOLAR;
+                return LAVADO_BRONCO_ALVEOLAR.getDescricao();
             case 3:
-                return TECIDO_POST_MORTEM;
+                return TECIDO_POST_MORTEM.getDescricao();
             case 4:
-                return OUTRO;
+                return OUTRO.getDescricao();
             case 5:
-                return LCR;
+                return LCR.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

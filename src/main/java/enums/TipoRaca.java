@@ -1,41 +1,47 @@
 package enums;
 
 public enum TipoRaca {
-    BRANCA (1),
-    PRETA (2),
-    AMARELA (3),
-    PARDA (4),
-    INDIGENA (5),
-    IGNORADO(9);
+    BRANCA (1, "Branca"),
+    PRETA (2, "Preta"),
+    AMARELA (3, "Amarela"),
+    PARDA (4, "Parda"),
+    INDIGENA (5, "Indigena"),
+    IGNORADO(9, "Ignorado");
 
     private final int valor;
+    private final String descricao;
 
-    TipoRaca(int opcao) {
+    TipoRaca(int opcao, String descricao) {
         this.valor = opcao;
+        this.descricao = descricao;
     }
 
     public int getValor() {
         return this.valor;
     }
 
-    public static TipoRaca getByCodigo(String codigo) {
+    public String getDescricao() {
+        return this.descricao;
+    }
+
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return BRANCA;
+                return BRANCA.getDescricao();
             case 2:
-                return PRETA;
+                return PRETA.getDescricao();
             case 3:
-                return AMARELA;
+                return AMARELA.getDescricao();
             case 4:
-                return PARDA;
+                return PARDA.getDescricao();
             case 5:
-                return INDIGENA;
+                return INDIGENA.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

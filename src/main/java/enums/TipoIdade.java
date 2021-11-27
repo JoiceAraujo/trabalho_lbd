@@ -17,18 +17,18 @@ public enum TipoIdade {
         this.descricao = descricao;
     }
 
-    public static TipoIdade getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return DIA;
+                return DIA.getDescricao();
             case 2:
-                return MES;
+                return MES.getDescricao();
             case 3:
-                return ANO;
+                return ANO.getDescricao();
             default:
                 return null;
         }

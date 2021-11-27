@@ -2,7 +2,6 @@ package models;
 
 import enums.*;
 import importer.DadosImporter;
-import lombok.NonNull;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -20,10 +19,10 @@ public class DadosAtendimento {
     private long pk;
 
     @Column(name = "usou_antiviral")
-    private SimNaoIgnorado usouAntiviral;
+    private String usouAntiviral;
 
     @Column(name = "tipo_antiviral_utilizado")
-    private TipoAntiviralGripe antiviralUtilizado;
+    private String antiviralUtilizado;
 
     @Column(name = "descricao_outro_antiviral")
     private String descricaoOutroAntiviralUtilizado;
@@ -32,7 +31,7 @@ public class DadosAtendimento {
     private Date dataInicioTratamento;
 
     @Column(name = "houve_internacao")
-    private SimNaoIgnorado houveInternacao;
+    private String houveInternacao;
 
     @Column(name = "data_internacao_srag")
     private Date dataInternacaoSrag;
@@ -53,7 +52,7 @@ public class DadosAtendimento {
     private String codigoRegionalInternacao;
 
     @Column(name = "internado_uti")
-    private SimNaoIgnorado internadoUti;
+    private String internadoUti;
 
     @Column(name = "data_entrada_uti")
     private Date dataEntradaUti;
@@ -62,10 +61,10 @@ public class DadosAtendimento {
     private Date dataSaidaUti;
 
     @Column(name = "tipo_suporte_ventilatorio")
-    private TipoUsoSuporteVentilatorio suporteVentilatorio;
+    private String suporteVentilatorio;
 
     @Column(name = "tipo_raio_x_torax")
-    private TipoRaioXTorax raioXTorax;
+    private String raioXTorax;
 
     @Column(name = "descricao_raio_x_torax")
     private String descricaoRaioXToraxOutro;
@@ -74,7 +73,7 @@ public class DadosAtendimento {
     private Date dataRaioX;
 
     @Column(name = "aspecto_tomografia")
-    private TipoAspectoTomografia aspectoTomografia;
+    private String aspectoTomografia;
 
     @Column(name = "descricao_aspecto_tomografia")
     private String descricaoAspectoTomografiaOutro;
@@ -83,13 +82,13 @@ public class DadosAtendimento {
     private Date dataTomografia;
 
     @Column(name = "coletou_amostra")
-    private SimNaoIgnorado coletouAmostra;
+    private String coletouAmostra;
 
     @Column(name = "data_coleta")
     private Date dataColeta;
 
     @Column(name = "tipo_amostra")
-    private TipoAmostra tipoAmostra;
+    private String tipoAmostra;
 
     @Column(name = "descricao_amostra")
     private String descricaoAmostraOutro;

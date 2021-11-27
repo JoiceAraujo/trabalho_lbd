@@ -18,20 +18,20 @@ public enum TipoZona {
         this.descricao = descricao;
     }
 
-    public static TipoZona getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return URBANA;
+                return URBANA.getDescricao();
             case 2:
-                return RURAL;
+                return RURAL.getDescricao();
             case 3:
-                return PERIURBANA;
+                return PERIURBANA.getDescricao();
             case 9:
-                return IGNORADO;
+                return IGNORADO.getDescricao();
             default:
                 return null;
         }

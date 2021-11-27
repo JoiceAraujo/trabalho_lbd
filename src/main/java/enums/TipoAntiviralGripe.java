@@ -17,18 +17,18 @@ public enum TipoAntiviralGripe {
         this.descricao = descricao;
     }
 
-    public static TipoAntiviralGripe getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return OSELTAMIVIR;
+                return OSELTAMIVIR.getDescricao();
             case 2:
-                return ZANAMIVIR;
+                return ZANAMIVIR.getDescricao();
             case 3:
-                return OUTRO;
+                return OUTRO.getDescricao();
             default:
                 return null;
         }

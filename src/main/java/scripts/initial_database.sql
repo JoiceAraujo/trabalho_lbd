@@ -34,7 +34,7 @@ create table dados_atendimento (
 
 create table dados_clinicos_epidemiologicos (
     dados_clinicos_epidemiologicos_pk serial primary key,
-    historico_viagem_internacional character varying (255) not null,
+    historico_viagem_internacional character varying (255),
     pais_viagem character varying (255),
     codigo_pais_viagem character varying (255),
     local_viagem character varying (255),
@@ -49,7 +49,7 @@ create table dados_clinicos_epidemiologicos (
     dor_garganta character varying (255),
     dispneia character varying (255),
     desconforto_respiratorio character varying (255),
-    saturacao_dioxigênio character varying (255),
+    saturacao_dioxigenio character varying (255),
     diarreia character varying (255),
     vomito character varying (255),
     dor_abdominal character varying (255),
@@ -96,10 +96,10 @@ create table dados_conclusivos (
 
 create table dados_paciente (
     dados_paciente_pk serial primary key,
-    sexo character varying (255) not null,
+    sexo character varying (255),
     data_nascimento date,
-    idade character varying (255) not null,
-    tipo_idade character varying (255) not null,
+    idade character varying (255),
+    tipo_idade character varying (255),
     tipo_idade_gestacional character varying (255),
     raca character varying (255),
     etnia_indigena character varying (255),
@@ -110,14 +110,14 @@ create table dados_paciente (
 
 create table dados_residencia_paciente (
     dados_residencia_paciente_pk serial primary key,
-    uf_paciente character varying (255) not null,
+    uf_paciente character varying (255),
     nome_regional_saude character varying (255),
     cod_regional_saude character varying (255),
-    nome_municipio character varying (255) not null,
-    cod_municipio character varying (255) not null,
+    nome_municipio character varying (255),
+    cod_municipio character varying (255),
     zona character varying (255),
-    pais character varying (255) not null,
-    codigo_pais character varying (255) not null
+    pais character varying (255),
+    codigo_pais character varying (255)
 );
 
 create table dados_laboratoriais (
@@ -170,17 +170,17 @@ create table dados_laboratoriais (
 
 create table dados_ficha (
     dados_ficha_pk serial primary key,
-    data_preenchimento_ficha_notificacao date not null,
+    data_preenchimento_ficha_notificacao date,
     semana_epidemiologica character varying (255),
-    data_primeiros_sintomas date not null,
+    data_primeiros_sintomas date,
     semana_epidemiologica_primeiros_sintomas character varying (255),
-    uf_posto_notificacao character varying (255) not null,
+    uf_posto_notificacao character varying (255),
     nome_regional_saude character varying (255),
     codigo_regional_saude character varying (255),
-    municipio_posto_notificacao character varying (255) not null,
+    municipio_posto_notificacao character varying (255),
     codigo_ibge_posto_notificacao character varying (255),
     nome_unidade_saude_notificacao character varying (255),
-    codigo_cnes_posto_notificacao character varying (255) not null,
+    codigo_cnes_posto_notificacao character varying (255),
     dados_atendimento_pk integer,
     dados_clinicos_epidemiologicos_pk integer,
     dados_conclusivos_pk integer,

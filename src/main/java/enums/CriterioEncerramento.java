@@ -22,20 +22,20 @@ public enum CriterioEncerramento {
         return this.descricao;
     }
 
-    public static CriterioEncerramento getByCodigo(String codigo) {
+    public static String getByCodigo(String codigo) {
         if(codigo.isEmpty()) {
             return null;
         }
 
         switch (Integer.parseInt(codigo)) {
             case 1:
-                return LABORATORIAL;
+                return LABORATORIAL.getDescricao();
             case 2:
-                return CLINICO_EPIDEMIOLOGICO;
+                return CLINICO_EPIDEMIOLOGICO.getDescricao();
             case 3:
-                return CLINICO;
+                return CLINICO.getDescricao();
             case 4:
-                return CLINICO_IMAGEM;
+                return CLINICO_IMAGEM.getDescricao();
             default:
                 return null;
         }
