@@ -64,7 +64,7 @@ public class DadosClinicosEpidemiologicos {
     @Column(name = "desconforto_respiratorio")
     private String desconfortoRespiratorio;
 
-    @Column(name = "saturacao_dioxigênio")
+    @Column(name = "saturacao_dioxigenio")
     private String saturacaoO2;
 
     @Column(name = "diarreia")
